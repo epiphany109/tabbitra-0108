@@ -28,12 +28,12 @@
     --radius: 0.5rem;
   }
 
-  * {
-    @apply border-border;
+  body {
+    @apply bg-forest text-white font-fredoka overflow-x-hidden m-0 p-0;
   }
 
-  body {
-    @apply bg-forest text-white font-fredoka overflow-x-hidden;
+  #root {
+    @apply p-0 m-0 w-full max-w-none;
   }
 
   .glass {
