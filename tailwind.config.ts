@@ -26,8 +26,8 @@ export default {
           light: "#2A3F33",
         },
         accent: {
-          DEFAULT: "#A4FF50",
-          dark: "#8EE040",
+          DEFAULT: "#cc9966",
+          dark: "#b88855",
         },
         wood: {
           DEFAULT: "#462921",

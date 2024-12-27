@@ -34,10 +34,8 @@ const Hero = () => {
       
       {/* Forest Background */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-forest" />
-        <div className="absolute inset-0 bg-[url('/tree-layer-1.png')] bg-cover animate-tree-sway" style={{ animationDelay: "0s" }} />
-        <div className="absolute inset-0 bg-[url('/tree-layer-2.png')] bg-cover animate-tree-sway" style={{ animationDelay: "0.2s" }} />
-        <div className="absolute inset-0 bg-[url('/tree-layer-3.png')] bg-cover animate-tree-sway" style={{ animationDelay: "0.4s" }} />
+        <div className="absolute inset-0 bg-[url('/lovable-uploads/50669ba8-6959-4298-8f05-c84fe20017bb.png')] bg-cover bg-center" />
+        <div className="absolute inset-0 bg-black/20" /> {/* Overlay for better text readability */}
       </div>
 
       {/* Content */}
@@ -49,7 +47,7 @@ const Hero = () => {
           The best way to interact with the chain DeFi
         </p>
         <Button
-          className="bg-accent hover:bg-accent-dark text-forest font-medium px-8 py-6 text-lg animate-fade-up"
+          className="bg-accent hover:bg-accent-dark text-white font-medium px-8 py-6 text-lg animate-fade-up"
           style={{ animationDelay: "0.4s" }}
         >
           ENTER BETA
