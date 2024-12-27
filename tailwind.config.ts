@@ -19,6 +19,7 @@ export default {
     },
     extend: {
       colors: {
+        border: "hsl(var(--border))",
         forest: {
           DEFAULT: "#1A2F23",
           dark: "#162019",
