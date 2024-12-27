@@ -48,10 +48,10 @@ const Hero = () => {
             The best way to interact with the chain DeFi
           </p>
           <div className="flex justify-center gap-4 mb-12">
-            <Button variant="outline" className="bg-[#98FF98] hover:bg-[#7FFF7F] text-forest font-medium">
+            <Button variant="outline" className="bg-accent hover:bg-accent-dark text-forest font-medium">
               TWITTER
             </Button>
-            <Button variant="outline" className="bg-[#98FF98] hover:bg-[#7FFF7F] text-forest font-medium">
+            <Button variant="outline" className="bg-accent hover:bg-accent-dark text-forest font-medium">
               DISCORD
             </Button>
           </div>
@@ -103,7 +103,7 @@ const Hero = () => {
           <h2 className="text-8xl font-bold mb-12">START EARNING</h2>
           <div className="relative">
             <img src="/lovable-uploads/f8ecf25d-f7b6-43c7-af89-5a9f7f2a640c.png" alt="Bera Logo" className="w-32 h-32 mx-auto animate-spin-slow" />
-            <Button className="bg-[#98FF98] hover:bg-[#7FFF7F] text-forest font-medium px-8 py-6 text-xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            <Button className="bg-accent hover:bg-accent-dark text-forest font-medium px-8 py-6 text-xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
               ENTER APP
             </Button>
           </div>
