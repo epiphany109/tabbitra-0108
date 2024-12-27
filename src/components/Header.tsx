@@ -22,7 +22,7 @@ const Header = () => {
       <div className="container mx-auto px-6">
         <nav className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <img src="/lovable-uploads/79f710f3-f452-4821-bf1a-da869cb1e12b.png" alt="Logo" className="h-8 w-8" />
+            <img src="/lovable-uploads/f8ecf25d-f7b6-43c7-af89-5a9f7f2a640c.png" alt="Logo" className="h-8 w-8" />
             <span className="text-xl font-bold">BERA TRAX</span>
           </div>
           
