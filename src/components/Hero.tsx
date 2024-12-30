@@ -3,6 +3,7 @@ import { Button } from "./ui/button";
 
 const Hero = () => {
   const particlesRef = useRef<HTMLDivElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
     const createLeaves = () => {
@@ -28,8 +29,14 @@ const Hero = () => {
     const handleScroll = () => {
       const scrolled = window.scrollY;
       const background = document.querySelector('.parallax-bg') as HTMLElement;
+      const title = titleRef.current;
+      
       if (background) {
         background.style.transform = `translateY(${scrolled * 0.5}px)`;
+      }
+      
+      if (title) {
+        title.style.transform = `translateY(${scrolled * 0.3}px)`; // Title moves slower than background
       }
     };
 
@@ -61,7 +68,7 @@ const Hero = () => {
       {/* Hero Content */}
       <div className="relative z-10 min-h-screen flex items-center justify-center px-0">
         <div className="text-center w-full">
-          <h1 className="text-7xl font-bold mb-6 animate-fade-up">
+          <h1 ref={titleRef} className="text-7xl font-bold mb-6 animate-fade-up" style={{ willChange: 'transform' }}>
             FOLLOW THE BERA TRAX
           </h1>
           <p className="text-xl mb-8 text-white/80 max-w-2xl mx-auto animate-fade-up" style={{ animationDelay: "0.2s" }}>
