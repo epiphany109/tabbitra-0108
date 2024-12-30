@@ -23,20 +23,36 @@ const Hero = () => {
 
     createLeaves();
     const interval = setInterval(createLeaves, 10000);
-    return () => clearInterval(interval);
+
+    // Add parallax effect
+    const handleScroll = () => {
+      const scrolled = window.scrollY;
+      const background = document.querySelector('.parallax-bg') as HTMLElement;
+      if (background) {
+        background.style.transform = `translateY(${scrolled * 0.5}px)`;
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   return (
     <div className="relative min-h-[500vh] flex flex-col">
       <div ref={particlesRef} className="fixed inset-0 pointer-events-none overflow-hidden z-20" />
       
-      {/* Autumn Forest Background */}
-      <div className="fixed inset-0 z-0">
+      {/* Autumn Forest Background with Parallax */}
+      <div className="fixed inset-0 z-0 overflow-hidden">
         <div 
-          className="absolute inset-0 bg-[url('/lovable-uploads/5d48c77d-889e-4e82-a315-dfebfe9f5790.png')] bg-cover bg-center"
+          className="parallax-bg absolute inset-0 bg-[url('/lovable-uploads/5d48c77d-889e-4e82-a315-dfebfe9f5790.png')] bg-cover"
           style={{ 
             backgroundPosition: 'center 20%',
-            filter: 'brightness(0.7) saturate(1.2)'
+            filter: 'brightness(0.7) saturate(1.2)',
+            height: '120%', // Extra height for parallax
+            width: '100%'
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/40" />
