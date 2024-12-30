@@ -5,37 +5,41 @@ const Hero = () => {
   const particlesRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const createParticles = () => {
+    const createLeaves = () => {
       if (!particlesRef.current) return;
       
       particlesRef.current.innerHTML = "";
-      const particleCount = 20;
+      const leafCount = 20;
       
-      for (let i = 0; i < particleCount; i++) {
-        const particle = document.createElement("div");
-        particle.className = "floating-particle";
-        particle.style.width = Math.random() * 4 + 2 + "px";
-        particle.style.height = particle.style.width;
-        particle.style.left = Math.random() * 100 + "%";
-        particle.style.top = Math.random() * 100 + "%";
-        particle.style.animationDelay = Math.random() * 5 + "s";
-        particlesRef.current.appendChild(particle);
+      for (let i = 0; i < leafCount; i++) {
+        const leaf = document.createElement("div");
+        leaf.className = "falling-leaf";
+        leaf.style.left = Math.random() * 100 + "%";
+        leaf.style.animationDelay = Math.random() * 10 + "s";
+        leaf.style.animationDuration = (Math.random() * 5 + 8) + "s";
+        particlesRef.current.appendChild(leaf);
       }
     };
 
-    createParticles();
-    window.addEventListener("resize", createParticles);
-    return () => window.removeEventListener("resize", createParticles);
+    createLeaves();
+    const interval = setInterval(createLeaves, 10000);
+    return () => clearInterval(interval);
   }, []);
 
   return (
     <div className="relative min-h-[500vh] flex flex-col">
-      <div ref={particlesRef} className="absolute inset-0 pointer-events-none" />
+      <div ref={particlesRef} className="fixed inset-0 pointer-events-none overflow-hidden z-20" />
       
-      {/* Forest Background */}
+      {/* Autumn Forest Background */}
       <div className="fixed inset-0 z-0">
-        <div className="absolute inset-0 bg-[url('/lovable-uploads/50669ba8-6959-4298-8f05-c84fe20017bb.png')] bg-cover bg-center" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/30" />
+        <div 
+          className="absolute inset-0 bg-[url('/lovable-uploads/5d48c77d-889e-4e82-a315-dfebfe9f5790.png')] bg-cover bg-center"
+          style={{ 
+            backgroundPosition: 'center 20%',
+            filter: 'brightness(0.7) saturate(1.2)'
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/40" />
       </div>
 
       {/* Hero Content */}
