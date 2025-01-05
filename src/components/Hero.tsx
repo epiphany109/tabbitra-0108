@@ -25,14 +25,15 @@ const Hero = () => {
     createLeaves();
     const interval = setInterval(createLeaves, 10000);
 
-    // Add parallax effect
+    // Enhanced parallax effect with zoom
     const handleScroll = () => {
       const scrolled = window.scrollY;
       const background = document.querySelector('.parallax-bg') as HTMLElement;
       const title = titleRef.current;
       
       if (background) {
-        background.style.transform = `translateY(${scrolled * 0.5}px)`;
+        const scale = 1 + (scrolled * 0.0005); // Gradual zoom effect
+        background.style.transform = `translateY(${scrolled * 0.5}px) scale(${scale})`;
       }
       
       if (title) {
@@ -59,7 +60,9 @@ const Hero = () => {
             backgroundPosition: 'center 20%',
             filter: 'brightness(0.7) saturate(1.2)',
             height: '120%', // Extra height for parallax
-            width: '100%'
+            width: '100%',
+            transformOrigin: 'center center', // Ensures zoom happens from center
+            willChange: 'transform' // Optimizes performance for transform animations
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/40" />
