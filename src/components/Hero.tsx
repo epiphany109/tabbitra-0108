@@ -55,7 +55,7 @@ const Hero = () => {
       {/* Autumn Forest Background with Parallax */}
       <div className="fixed inset-0 z-0 overflow-hidden">
         <div 
-          className="parallax-bg absolute inset-0 bg-[url('/lovable-uploads/5598f9f5-ec66-4d93-879c-ca270270780e.png')] bg-no-repeat"
+          className="parallax-bg absolute inset-0 bg-[url('/lovable-uploads/ee5a0155-faae-48e3-8452-63819d7e005d.png')] bg-no-repeat"
           style={{ 
             backgroundPosition: 'center center',
             backgroundSize: 'contain',
@@ -74,7 +74,7 @@ const Hero = () => {
       <div className="relative z-10 min-h-screen flex items-center justify-center px-0">
         <div className="text-center w-full">
           <h1 ref={titleRef} className="text-7xl font-bold mb-6 animate-fade-up" style={{ willChange: 'transform' }}>
-            FOLLOW THE BERA TRAX
+            Embark On Tabbitra Voyage
           </h1>
           <p className="text-xl mb-8 text-white/80 max-w-2xl mx-auto animate-fade-up" style={{ animationDelay: "0.2s" }}>
             The best way to interact with the chain DeFi
@@ -97,12 +97,11 @@ const Hero = () => {
       <div className="relative z-10 min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h2 className="text-[150px] font-bold text-white/10">
-            BERA TRAX
+            Tabbitra Voyage
           </h2>
         </div>
       </div>
 
-      {/* Wooden Sign Sections */}
       <div className="relative z-10 min-h-screen">
         <div className="container mx-auto px-4">
           <div className="bg-wood p-8 rounded-lg transform -rotate-2 mb-24 max-w-2xl">
