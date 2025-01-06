@@ -55,7 +55,7 @@ const Hero = () => {
       {/* Autumn Forest Background with Parallax */}
       <div className="fixed inset-0 z-0 overflow-hidden">
         <div 
-          className="parallax-bg absolute inset-0 bg-[url('/lovable-uploads/ee5a0155-faae-48e3-8452-63819d7e005d.png')] bg-no-repeat"
+          className="parallax-bg absolute inset-0 bg-[url('/lovable-uploads/4179d2e4-83ef-4528-9f76-cdf3801ad936.png')] bg-no-repeat"
           style={{ 
             backgroundPosition: 'center center',
             backgroundSize: 'contain',
