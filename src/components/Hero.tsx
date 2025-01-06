@@ -55,9 +55,10 @@ const Hero = () => {
       {/* Autumn Forest Background with Parallax */}
       <div className="fixed inset-0 z-0 overflow-hidden">
         <div 
-          className="parallax-bg absolute inset-0 bg-[url('/lovable-uploads/5598f9f5-ec66-4d93-879c-ca270270780e.png')] bg-cover"
+          className="parallax-bg absolute inset-0 bg-[url('/lovable-uploads/5598f9f5-ec66-4d93-879c-ca270270780e.png')] bg-no-repeat"
           style={{ 
             backgroundPosition: 'center center',
+            backgroundSize: 'auto',
             filter: 'brightness(0.9)',
             height: '120%', // Extra height for parallax
             width: '100%',
@@ -132,7 +133,7 @@ const Hero = () => {
         <div className="text-center">
           <h2 className="text-8xl font-bold mb-12">START EARNING</h2>
           <div className="relative">
-            <img src="/lovable-uploads/f8ecf25d-f7b6-43c7-af89-5a9f7f2a640c.png" alt="Bera Logo" className="w-32 h-32 mx-auto animate-spin-slow" />
+            <img src="/lovable-uploads/f8ecf25d-f7b6-43c7-af89-5a9f7f2a640c.png" alt="Bera Logo" className="w-auto h-auto mx-auto animate-spin-slow" />
             <Button className="bg-accent hover:bg-accent-dark text-forest font-medium px-8 py-6 text-xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
               ENTER APP
             </Button>
