@@ -58,7 +58,8 @@ const Hero = () => {
           className="parallax-bg absolute inset-0 bg-[url('/lovable-uploads/5598f9f5-ec66-4d93-879c-ca270270780e.png')] bg-no-repeat"
           style={{ 
             backgroundPosition: 'center center',
-            backgroundSize: 'auto',
+            backgroundSize: 'contain',
+            backgroundRepeat: 'no-repeat',
             filter: 'brightness(0.9)',
             height: '120%', // Extra height for parallax
             width: '100%',
