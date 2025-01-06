@@ -55,17 +55,17 @@ const Hero = () => {
       {/* Autumn Forest Background with Parallax */}
       <div className="fixed inset-0 z-0 overflow-hidden">
         <div 
-          className="parallax-bg absolute inset-0 bg-[url('/lovable-uploads/5d48c77d-889e-4e82-a315-dfebfe9f5790.png')] bg-cover"
+          className="parallax-bg absolute inset-0 bg-[url('/lovable-uploads/5598f9f5-ec66-4d93-879c-ca270270780e.png')] bg-cover"
           style={{ 
-            backgroundPosition: 'center 20%',
-            filter: 'brightness(0.7) saturate(1.2)',
+            backgroundPosition: 'center center',
+            filter: 'brightness(0.9)',
             height: '120%', // Extra height for parallax
             width: '100%',
             transformOrigin: 'center center', // Ensures zoom happens from center
             willChange: 'transform' // Optimizes performance for transform animations
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/30" />
       </div>
 
       {/* Hero Content */}
