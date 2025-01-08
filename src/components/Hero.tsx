@@ -130,7 +130,7 @@ const Hero = () => {
 
       {/* Start Earning Section */}
       <div className="relative z-10 min-h-[70vh] bg-wood-dark flex flex-col items-center justify-center">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 pt-20">
           <h2 className="text-8xl font-bold mb-12 mt-15">START EARNING</h2>
           <div className="relative">
             <img src="/lovable-uploads/f8ecf25d-f7b6-43c7-af89-5a9f7f2a640c.png" alt="Bera Logo" className="w-auto h-auto mx-auto animate-spin-slow" />
