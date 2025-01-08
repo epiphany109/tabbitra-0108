@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
-import { Twitter, MessageCircle } from "lucide-react";
+import { Twitter, MessageSquare } from "lucide-react";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -39,7 +39,7 @@ const Header = () => {
               size="sm"
               className="text-white hover:text-accent transition-colors"
             >
-              <img src="/lovable-uploads/fe4379f2-8db6-48ed-bbed-a290c4226c74.png" alt="Discord" className="h-5 w-5" />
+              <MessageSquare className="h-5 w-5" />
             </Button>
             <Button
               className="bg-accent hover:bg-accent-dark text-forest font-medium transition-colors"
