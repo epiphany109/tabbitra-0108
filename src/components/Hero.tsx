@@ -96,7 +96,7 @@ const Hero = () => {
       {/* Features Section */}
       <div className="relative z-10 min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h2 className="text-[150px] font-bold text-white/10">
+          <h2 className="text-[100px] font-bold text-white/10">
             Tabbitra Voyage
           </h2>
         </div>
@@ -129,7 +129,7 @@ const Hero = () => {
       </div>
 
       {/* Start Earning Section */}
-      <div className="relative z-10 min-h-[70vh] flex flex-col items-center justify-center">
+      <div className="relative z-10 min-h-[70vh] bg-wood-dark flex flex-col items-center justify-center">
         <div className="text-center mb-12">
           <h2 className="text-8xl font-bold mb-12">START EARNING</h2>
           <div className="relative">
