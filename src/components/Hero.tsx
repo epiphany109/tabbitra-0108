@@ -61,10 +61,10 @@ const Hero = () => {
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             filter: 'brightness(0.9)',
-            height: '120%', // Extra height for parallax
+            height: '120%',
             width: '100%',
-            transformOrigin: 'center center', // Ensures zoom happens from center
-            willChange: 'transform' // Optimizes performance for transform animations
+            transformOrigin: 'center center',
+            willChange: 'transform'
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/30" />
@@ -129,7 +129,7 @@ const Hero = () => {
       </div>
 
       {/* Start Earning Section */}
-      <div className="relative z-10 min-h-[70vh] bg-wood-dark flex flex-col items-center justify-center">
+      <div className="relative z-10 min-h-[70vh] flex flex-col items-center justify-center">
         <div className="text-center mb-12">
           <h2 className="text-8xl font-bold mb-12">START EARNING</h2>
           <div className="relative">
@@ -139,9 +139,11 @@ const Hero = () => {
             </Button>
           </div>
         </div>
-        <div className="text-sm text-white/60 mt-auto pb-4">
-          © 2024 Tabbitra. All rights reserved.
-        </div>
+      </div>
+
+      {/* Copyright Section */}
+      <div className="relative z-10 text-sm text-white/60 text-center py-4">
+        © 2024 Tabbitra. All rights reserved.
       </div>
     </div>
   );
