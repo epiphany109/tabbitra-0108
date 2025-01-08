@@ -55,10 +55,10 @@ const Hero = () => {
       {/* Autumn Forest Background with Parallax */}
       <div className="fixed inset-0 z-0 overflow-hidden">
         <div 
-          className="parallax-bg absolute inset-0 bg-[url('/lovable-uploads/0056b03e-7ec5-4855-84fc-0c7727fd2778.png')] bg-no-repeat"
+          className="parallax-bg absolute inset-0 bg-[url('/lovable-uploads/31509c9d-7aa4-4bb9-b783-2db4bb9388f3.png')] bg-no-repeat"
           style={{ 
             backgroundPosition: 'center center',
-            backgroundSize: 'cover', // Changed from 'contain' to 'cover'
+            backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             filter: 'brightness(0.9)',
             height: '120%', // Extra height for parallax
@@ -111,7 +111,7 @@ const Hero = () => {
           
           <div className="bg-wood p-8 rounded-lg transform rotate-2 mb-24 ml-auto max-w-2xl">
             <h3 className="text-3xl font-bold mb-4">EARNING OPTIMIZED</h3>
-            <p className="text-lg">BeraTrax handles everything - swaps, contract interactions, and gas payments - maximizing your yield with minimal effort</p>
+            <p className="text-lg">Tabbitra handles everything - swaps, contract interactions, and gas payments - maximizing your yield with minimal effort</p>
           </div>
 
           <div className="grid grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -122,7 +122,7 @@ const Hero = () => {
             
             <div className="bg-wood p-8 rounded-lg transform rotate-1">
               <h3 className="text-2xl font-bold mb-4">EXPLOIT BLOCKING PROTECTION</h3>
-              <p className="text-lg">BeraTrax leverages Spherex's zero day exploit blocking to ensure that only you can access your funds</p>
+              <p className="text-lg">Tabbitra leverages Spherex's zero day exploit blocking to ensure that only you can access your funds</p>
             </div>
           </div>
         </div>
