@@ -133,7 +133,7 @@ const Hero = () => {
         <div className="text-center mb-12">
           <h2 className="text-8xl font-bold mb-12">START EARNING</h2>
           <div className="relative">
-            <img src="/lovable-uploads/f8ecf25d-f7b6-43c7-af89-5a9f7f2a640c.png" alt="Bera Logo" className="w-auto h-auto mx-auto animate-spin-slow" />
+            <img src="/lovable-uploads/f89747e0-9d82-4c84-a809-e2c3f271fd95.png" alt="Geometric Rabbit" className="w-auto h-auto mx-auto animate-spin-slow" />
             <Button className="bg-accent hover:bg-accent-dark text-forest font-medium px-8 py-6 text-xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
               ENTER APP
             </Button>
