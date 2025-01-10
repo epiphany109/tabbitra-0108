@@ -39,11 +39,10 @@ const Header = () => {
               size="sm"
               className="text-white hover:text-accent transition-colors"
             >
-              {/* 將 MessageSquare 替換為 img 標籤 */}
               <img 
-                src="lovable-uploads/636e0a6918e57475a843f59f_icon_clyde_black_RGB.svg"  {/*圖片路徑*/}
+                src="/lovable-uploads/636e0a6918e57475a843f59f_icon_clyde_black_RGB.svg"
                 alt="Message"
-                className="h-5 w-5"  {/* 保持與原本 icon 相同的尺寸 */}
+                className="h-5 w-5"
               />           
             </Button>
             <Button
