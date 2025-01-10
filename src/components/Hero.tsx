@@ -29,42 +29,52 @@ const Hero = () => {
     // Enhanced parallax and fade-in effects
     const handleScroll = () => {
       const scrolled = window.scrollY;
+      const viewportHeight = window.innerHeight;
+      
+      // Get background elements
       const background1 = document.querySelector('.parallax-bg-1') as HTMLElement;
       const background2 = document.querySelector('.parallax-bg-2') as HTMLElement;
-      const title = titleRef.current;
       
-      // Parallax for backgrounds
-      if (background1 && background2) {
-        const scale = 1 + (scrolled * 0.0005);
-        background1.style.transform = `translateY(${scrolled * 0.5}px) scale(${scale})`;
-        background2.style.transform = `translateY(${scrolled * 0.7}px) scale(${scale * 1.1})`;
+      // Calculate when second section should start
+      const secondSectionStart = viewportHeight;
+      
+      // Parallax for first background
+      if (background1) {
+        if (scrolled < secondSectionStart) {
+          const scale = 1 + (scrolled * 0.0005);
+          background1.style.transform = `translateY(${scrolled * 0.5}px) scale(${scale})`;
+          background1.style.opacity = `${1 - (scrolled / secondSectionStart)}`;
+        } else {
+          background1.style.opacity = '0';
+        }
       }
       
-      // Parallax for title
-      if (title) {
-        title.style.transform = `translateY(${scrolled * 0.3}px)`;
+      // Parallax for second background
+      if (background2) {
+        if (scrolled >= secondSectionStart) {
+          const scale = 1 + ((scrolled - secondSectionStart) * 0.0005);
+          background2.style.transform = `translateY(${(scrolled - secondSectionStart) * 0.3}px) scale(${scale})`;
+          background2.style.opacity = '1';
+        } else {
+          background2.style.opacity = '0';
+        }
       }
 
       // Features fade-in animation
-      if (featuresRef.current) {
-        const features = featuresRef.current.getElementsByClassName('feature-box');
-        Array.from(features).forEach((feature, index) => {
-          const featureTop = (feature as HTMLElement).offsetTop;
-          const triggerPoint = window.innerHeight * 0.75;
-          
-          if (scrolled + triggerPoint > featureTop) {
-            (feature as HTMLElement).style.opacity = '1';
-            (feature as HTMLElement).style.transform = 'translateY(0) rotate(var(--rotate-angle))';
-          }
-        });
-      }
+      const features = document.querySelectorAll('.feature-box');
+      features.forEach((feature, index) => {
+        const featureTop = (feature as HTMLElement).offsetTop;
+        const scrollPosition = scrolled + window.innerHeight * 0.8;
+        
+        if (scrollPosition > featureTop) {
+          (feature as HTMLElement).style.opacity = '1';
+          (feature as HTMLElement).style.transform = 'translateY(0) rotate(var(--rotate-angle))';
+        }
+      });
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => {
-      clearInterval(interval);
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
@@ -84,7 +94,7 @@ const Hero = () => {
             width: '100%',
             transformOrigin: 'center center',
             willChange: 'transform',
-            opacity: 0.8
+            transition: 'opacity 0.5s ease-out'
           }}
         />
         <div 
@@ -98,8 +108,8 @@ const Hero = () => {
             width: '100%',
             transformOrigin: 'center center',
             willChange: 'transform',
-            opacity: 0.5,
-            mixBlendMode: 'overlay'
+            opacity: 0,
+            transition: 'opacity 0.5s ease-out'
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/30" />
@@ -126,68 +136,58 @@ const Hero = () => {
       </div>
 
       {/* Features Section */}
-      <div 
-        className="relative z-10 min-h-screen flex items-center justify-center"
-        style={{
-          backgroundImage: 'url("/lovable-uploads/6f2d46843e458a7915b8ea89f0e8a4e0.jpg")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
-        <div className="text-center">
-          <h2 className="text-[90px] font-bold text-white/10">
-            Tabbitra    Voyage
-          </h2>
-        </div>
-      </div>
-
-      {/* Enhanced Features Section with Fade-in Animation */}
-      <div className="relative z-10 min-h-screen" ref={featuresRef}>
+      <div className="relative z-10 min-h-screen flex items-center justify-center">
         <div className="container mx-auto px-4">
-          <div 
-            className="feature-box bg-wood p-8 rounded-lg mb-24 max-w-2xl transition-all duration-1000 opacity-0"
-            style={{ 
-              '--rotate-angle': '-2deg',
-              transform: 'translateY(50px) rotate(-2deg)'
-            } as React.CSSProperties}
-          >
-            <h3 className="text-3xl font-bold mb-4">DECENTRALIZED, YET INTUITIVE</h3>
-            <p className="text-lg">Experience the freedom of DeFi with an intuitive, mobile-first app</p>
-          </div>
-          
-          <div 
-            className="feature-box bg-wood p-8 rounded-lg mb-24 ml-auto max-w-2xl transition-all duration-1000 opacity-0"
-            style={{ 
-              '--rotate-angle': '2deg',
-              transform: 'translateY(50px) rotate(2deg)'
-            } as React.CSSProperties}
-          >
-            <h3 className="text-3xl font-bold mb-4">EARNING OPTIMIZED</h3>
-            <p className="text-lg">Tabbitra handles everything - swaps, contract interactions, and gas payments - maximizing your yield with minimal effort</p>
-          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div 
+              className="feature-box bg-wood p-8 rounded-lg transition-all duration-1000 opacity-0"
+              style={{ 
+                '--rotate-angle': '-2deg',
+                transform: 'translateY(50px) rotate(-2deg)',
+                transition: 'all 0.8s ease-out'
+              } as React.CSSProperties}
+            >
+              <h3 className="text-3xl font-bold mb-4">DECENTRALIZED, YET INTUITIVE</h3>
+              <p className="text-lg">Experience the freedom of DeFi with an intuitive, mobile-first app</p>
+            </div>
+            
+            <div 
+              className="feature-box bg-wood p-8 rounded-lg transition-all duration-1000 opacity-0"
+              style={{ 
+                '--rotate-angle': '2deg',
+                transform: 'translateY(50px) rotate(2deg)',
+                transition: 'all 0.8s ease-out',
+                transitionDelay: '0.2s'
+              } as React.CSSProperties}
+            >
+              <h3 className="text-3xl font-bold mb-4">EARNING OPTIMIZED</h3>
+              <p className="text-lg">Tabbitra handles everything - swaps, contract interactions, and gas payments</p>
+            </div>
 
-          <div className="grid grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div 
               className="feature-box bg-wood p-8 rounded-lg transition-all duration-1000 opacity-0"
               style={{ 
                 '--rotate-angle': '-1deg',
-                transform: 'translateY(50px) rotate(-1deg)'
+                transform: 'translateY(50px) rotate(-1deg)',
+                transition: 'all 0.8s ease-out',
+                transitionDelay: '0.4s'
               } as React.CSSProperties}
             >
               <h3 className="text-2xl font-bold mb-4">DEFI WITH DATA</h3>
-              <p className="text-lg">Simulate deposit outcomes, track your transactions, and gain real-time performance insights</p>
+              <p className="text-lg">Simulate deposit outcomes, track your transactions, and gain insights</p>
             </div>
             
             <div 
               className="feature-box bg-wood p-8 rounded-lg transition-all duration-1000 opacity-0"
               style={{ 
                 '--rotate-angle': '1deg',
-                transform: 'translateY(50px) rotate(1deg)'
+                transform: 'translateY(50px) rotate(1deg)',
+                transition: 'all 0.8s ease-out',
+                transitionDelay: '0.6s'
               } as React.CSSProperties}
             >
               <h3 className="text-2xl font-bold mb-4">EXPLOIT BLOCKING PROTECTION</h3>
-              <p className="text-lg">Tabbitra leverages Spherex's zero day exploit blocking to ensure that only you can access your funds</p>
+              <p className="text-lg">Tabbitra leverages Spherex's zero day exploit blocking</p>
             </div>
           </div>
         </div>
