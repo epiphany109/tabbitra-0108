@@ -87,7 +87,7 @@ const ParallaxHero = () => {
       <div className="fixed inset-0 z-10 overflow-hidden">
         <div 
           ref={layer2Ref}
-          className="absolute inset-0 bg-[url('/your-second-image.png')] bg-no-repeat"
+          className="absolute inset-0 bg-[url('lovable-uploads/6f2d46843e458a7915b8ea89f0e8a4e0.jpg')] bg-no-repeat"
           style={{ 
             backgroundPosition: 'center center',
             backgroundSize: 'cover',
@@ -176,7 +176,7 @@ const ParallaxHero = () => {
       {/* Start Earning Section */}
       <div className="relative z-20 min-h-[70vh] bg-wood-dark/90 backdrop-blur-sm flex flex-col items-center justify-center">
         <div className="text-center mb-12 pt-20">
-          <h2 className="text-8xl font-bold mb-12 mt-15">START EARNING</h2>
+          <h2 className="text-8xl font-bold mb-12 mt-15">START   EARNING</h2>
           <div className="relative">
             <img 
               src="/lovable-uploads/f8ecf25d-f7b6-43c7-af89-5a9f7f2a640c.png" 
@@ -186,7 +186,7 @@ const ParallaxHero = () => {
             <Button 
               className="bg-accent/90 hover:bg-accent-dark backdrop-blur-sm text-forest font-medium px-8 py-6 text-xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all duration-300 hover:-translate-y-1 hover:scale-110"
             >
-              ENTER APP
+              ENTER   APP
             </Button>
           </div>
         </div>
