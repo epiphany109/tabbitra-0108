@@ -106,7 +106,7 @@ const Hero = () => {
             backgroundPosition: 'center center',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
-            height: '150%',
+            height: '120%',
             width: '100%',
             transformOrigin: 'center center',
             willChange: 'transform, opacity',
@@ -119,7 +119,7 @@ const Hero = () => {
             backgroundPosition: 'center center',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
-            height: '150%',
+            height: '120%',
             width: '100%',
             transformOrigin: 'center center',
             willChange: 'transform, opacity',
@@ -129,7 +129,7 @@ const Hero = () => {
         />
       </div>
 
-      <div className="relative z-10 h-fit flex items-center justify-center px-0">
+      <div className="relative z-10 min-h-screen flex items-center justify-center px-0">
         <div className="text-center w-full">
           <h1 ref={titleRef} className="text-6xl font-semibold mb-6 animate-fade-up" style={{ willChange: 'transform' }}>
             Embark On Tabbitra Voyage
@@ -148,7 +148,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="relative z-10 min-h-screen flex items-center justify-center">
+      <div className="relative z-10 h-fit flex items-center justify-center">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             <div 
