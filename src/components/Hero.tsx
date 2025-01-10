@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { Button } from "./ui/button";
+import Logo3D from "./Logo3D";
 
 const Hero = () => {
   const particlesRef = useRef<HTMLDivElement>(null);
@@ -209,11 +210,7 @@ const Hero = () => {
         <div className="text-center mb-12 pt-20">
           <h2 className="text-6xl font-semibold mb-12 mt-15">START   EARNING</h2>
           <div className="relative">
-            <img 
-              src="/lovable-uploads/TabbitLogo.png" 
-              alt="Tabbit Logo" 
-              className="w-50% h-50% mx-auto animate-spin-slow" 
-            />
+            <Logo3D />
             <Button 
               className="bg-accent hover:bg-accent-dark text-forest font-medium px-8 py-6 text-xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all duration-300 hover:-translate-y-1 hover:scale-110 outline-none focus:outline-none active:outline-none"
             >
