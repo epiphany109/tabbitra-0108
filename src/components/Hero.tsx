@@ -194,7 +194,7 @@ const Hero = () => {
       </div>
 
       {/* Start Earning Section */}
-      <div className="relative z-10 min-h-[70vh] flex flex-col items-center justify-center">
+      
         <div className="text-center mb-12 pt-20">
           <h2 className="text-6xl font-semibold mb-12 mt-15">START    EARNING</h2>
           <div className="relative">
@@ -204,7 +204,7 @@ const Hero = () => {
             </Button>
           </div>
         </div>
-      </div>
+      
 
       {/* Copyright Section */}
       <div className="relative z-10 text-sm text-white/60 text-center py-4">
