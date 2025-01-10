@@ -191,7 +191,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-      </div>
+      
 
       {/* Start Earning Section */}
       <div className="relative z-10 min-h-[70vh] bg-wood-dark flex flex-col items-center justify-center">
@@ -210,7 +210,7 @@ const Hero = () => {
       <div className="relative z-10 text-sm text-white/60 text-center py-4">
         © 2024 Tabbitra. All rights reserved.
       </div>
-    
+    </div>
   );
 };
 
