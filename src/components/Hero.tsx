@@ -5,6 +5,7 @@ const Hero = () => {
   const particlesRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const featuresRef = useRef<HTMLDivElement>(null);
+  const footerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const createLeaves = () => {
@@ -26,10 +27,10 @@ const Hero = () => {
     createLeaves();
     const interval = setInterval(createLeaves, 10000);
 
-    // Enhanced parallax and fade-in effects
     const handleScroll = () => {
       const scrolled = window.scrollY;
       const viewportHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
       
       // Get background elements
       const background1 = document.querySelector('.parallax-bg-1') as HTMLElement;
@@ -38,26 +39,43 @@ const Hero = () => {
       // Calculate when second section should start
       const secondSectionStart = viewportHeight;
       
-      // Parallax for first background
-      if (background1) {
-        if (scrolled < secondSectionStart) {
-          const scale = 1 + (scrolled * 0.0005);
-          background1.style.transform = `translateY(${scrolled * 0.5}px) scale(${scale})`;
-          background1.style.opacity = `${1 - (scrolled / secondSectionStart)}`;
+      // Smooth transition between backgrounds
+      if (background1 && background2) {
+        const transitionPoint = secondSectionStart;
+        const transitionRange = viewportHeight / 2; // Transition over half a viewport
+        
+        if (scrolled < transitionPoint) {
+          // First background fully visible
+          background1.style.opacity = '1';
+          background2.style.opacity = '0';
+        } else if (scrolled >= transitionPoint && scrolled <= transitionPoint + transitionRange) {
+          // Transition zone
+          const progress = (scrolled - transitionPoint) / transitionRange;
+          background1.style.opacity = `${1 - progress}`;
+          background2.style.opacity = `${progress}`;
         } else {
+          // Second background fully visible
           background1.style.opacity = '0';
+          background2.style.opacity = '1';
+        }
+
+        // Parallax effect
+        if (background1) {
+          background1.style.transform = `translateY(${scrolled * 0.5}px) scale(${1 + (scrolled * 0.0005)})`;
+        }
+        if (background2) {
+          background2.style.transform = `translateY(${(scrolled - secondSectionStart) * 0.3}px) scale(${1 + ((scrolled - secondSectionStart) * 0.0005)})`;
         }
       }
-      
-      // Parallax for second background
-      if (background2) {
-        if (scrolled >= secondSectionStart) {
-          const scale = 1 + ((scrolled - secondSectionStart) * 0.0005);
-          background2.style.transform = `translateY(${(scrolled - secondSectionStart) * 0.3}px) scale(${scale})`;
-          background2.style.opacity = '1';
-        } else {
-          background2.style.opacity = '0';
-        }
+
+      // Footer visibility logic
+      if (footerRef.current) {
+        const bottomThreshold = 100; // pixels from bottom
+        const isNearBottom = (window.innerHeight + window.scrollY) >= documentHeight - bottomThreshold;
+        
+        footerRef.current.style.position = isNearBottom ? 'fixed' : 'absolute';
+        footerRef.current.style.opacity = isNearBottom ? '1' : '0';
+        footerRef.current.style.transform = isNearBottom ? 'translateY(0)' : 'translateY(20px)';
       }
 
       // Features fade-in animation
@@ -81,7 +99,6 @@ const Hero = () => {
     <div className="relative min-h-[500vh] flex flex-col">
       <div ref={particlesRef} className="fixed inset-0 pointer-events-none overflow-hidden z-20" />
       
-      {/* Parallax Backgrounds */}
       <div className="fixed inset-0 z-0 overflow-hidden">
         <div 
           className="parallax-bg-1 absolute inset-0 bg-[url('/lovable-uploads/31509c9d-7aa4-4bb9-b783-2db4bb9388f3.png')] bg-no-repeat"
@@ -89,11 +106,10 @@ const Hero = () => {
             backgroundPosition: 'center center',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
-            filter: 'brightness(0.9)',
             height: '120%',
             width: '100%',
             transformOrigin: 'center center',
-            willChange: 'transform',
+            willChange: 'transform, opacity',
             transition: 'opacity 0.5s ease-out'
           }}
         />
@@ -103,19 +119,16 @@ const Hero = () => {
             backgroundPosition: 'center center',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
-            filter: 'brightness(0.7)',
             height: '120%',
             width: '100%',
             transformOrigin: 'center center',
-            willChange: 'transform',
+            willChange: 'transform, opacity',
             opacity: 0,
             transition: 'opacity 0.5s ease-out'
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/30" />
       </div>
 
-      {/* Hero Content */}
       <div className="relative z-10 min-h-screen flex items-center justify-center px-0">
         <div className="text-center w-full">
           <h1 ref={titleRef} className="text-6xl font-semibold mb-6 animate-fade-up" style={{ willChange: 'transform' }}>
@@ -135,7 +148,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Features Section */}
       <div className="relative z-10 min-h-screen flex items-center justify-center">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
@@ -193,7 +205,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Start Earning Section */}
       <div className="relative z-10 min-h-screen flex items-center justify-center">
         <div className="text-center mb-12 pt-20">
           <h2 className="text-6xl font-semibold mb-12 mt-15">START EARNING</h2>
@@ -212,8 +223,15 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Copyright Section - Now fixed to bottom */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 bg-forest/80 backdrop-blur-sm py-4">
+      <div 
+        ref={footerRef}
+        className="absolute bottom-0 left-0 right-0 z-50 bg-forest/80 backdrop-blur-sm py-4"
+        style={{
+          transition: 'opacity 0.3s ease-out, transform 0.3s ease-out',
+          opacity: 0,
+          transform: 'translateY(20px)'
+        }}
+      >
         <div className="text-sm text-white/60 text-center">
           © 2024 Tabbitra. All rights reserved.
         </div>
