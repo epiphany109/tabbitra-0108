@@ -210,7 +210,7 @@ const Hero = () => {
       <div className="relative z-10 text-sm text-white/60 text-center py-4">
         © 2024 Tabbitra. All rights reserved.
       </div>
-    </div>
+    
   );
 };
 
