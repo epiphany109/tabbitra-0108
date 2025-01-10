@@ -118,7 +118,7 @@ const Hero = () => {
       {/* Hero Content */}
       <div className="relative z-10 min-h-screen flex items-center justify-center px-0">
         <div className="text-center w-full">
-          <h1 ref={titleRef} className="text-7xl font-bold mb-6 animate-fade-up" style={{ willChange: 'transform' }}>
+          <h1 ref={titleRef} className="text-6xl font-semibold mb-6 animate-fade-up" style={{ willChange: 'transform' }}>
             Embark On Tabbitra Voyage
           </h1>
           <p className="text-xl mb-8 text-white/80 max-w-2xl mx-auto animate-fade-up" style={{ animationDelay: "0.2s" }}>
@@ -147,7 +147,7 @@ const Hero = () => {
                 transition: 'all 0.8s ease-out'
               } as React.CSSProperties}
             >
-              <h3 className="text-3xl font-bold mb-4">DECENTRALIZED, YET INTUITIVE</h3>
+              <h3 className="text-2xl font-semibold mb-4">DECENTRALIZED, YET INTUITIVE</h3>
               <p className="text-lg">Experience the freedom of DeFi with an intuitive, mobile-first app</p>
             </div>
             
@@ -160,7 +160,7 @@ const Hero = () => {
                 transitionDelay: '0.2s'
               } as React.CSSProperties}
             >
-              <h3 className="text-3xl font-bold mb-4">EARNING OPTIMIZED</h3>
+              <h3 className="text-2xl font-semibold mb-4">EARNING OPTIMIZED</h3>
               <p className="text-lg">Tabbitra handles everything - swaps, contract interactions, and gas payments</p>
             </div>
 
@@ -173,7 +173,7 @@ const Hero = () => {
                 transitionDelay: '0.4s'
               } as React.CSSProperties}
             >
-              <h3 className="text-2xl font-bold mb-4">DEFI WITH DATA</h3>
+              <h3 className="text-2xl font-semibold mb-4">DEFI WITH DATA</h3>
               <p className="text-lg">Simulate deposit outcomes, track your transactions, and gain insights</p>
             </div>
             
@@ -186,7 +186,7 @@ const Hero = () => {
                 transitionDelay: '0.6s'
               } as React.CSSProperties}
             >
-              <h3 className="text-2xl font-bold mb-4">EXPLOIT BLOCKING PROTECTION</h3>
+              <h3 className="text-2xl font-semibold mb-4">EXPLOIT BLOCKING PROTECTION</h3>
               <p className="text-lg">Tabbitra leverages Spherex's zero day exploit blocking</p>
             </div>
           </div>
@@ -196,9 +196,9 @@ const Hero = () => {
       {/* Start Earning Section */}
       <div className="relative z-10 min-h-[70vh] bg-wood-dark flex flex-col items-center justify-center">
         <div className="text-center mb-12 pt-20">
-          <h2 className="text-8xl font-bold mb-12 mt-15">START    EARNING</h2>
+          <h2 className="text-6xl font-semibold mb-12 mt-15">START    EARNING</h2>
           <div className="relative">
-            <img src="/lovable-uploads/f8ecf25d-f7b6-43c7-af89-5a9f7f2a640c.png" alt="Bera Logo" className="w-auto h-auto mx-auto animate-spin-slow" />
+            <img src="/lovable-uploads/f8ecf25d-f7b6-43c7-af89-5a9f7f2a640c.png" alt="Tabbit Logo" className="w-auto h-auto mx-auto animate-spin-slow" />
             <Button className="bg-accent hover:bg-accent-dark text-forest font-medium px-8 py-6 text-xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all duration-300 hover:-translate-y-1 hover:scale-110 outline-none focus:outline-none active:outline-none">
               ENTER   APP
             </Button>

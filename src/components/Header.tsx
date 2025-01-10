@@ -22,8 +22,8 @@ const Header = () => {
       <div className="container mx-auto px-6">
         <nav className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <img src="/lovable-uploads/f8ecf25d-f7b6-43c7-af89-5a9f7f2a640c.png" alt="Logo" className="h-8 w-8" />
-            <span className="text-xl font-bold">TABBITRA VOYAGE</span>
+            <img src="/lovable-uploads/istockphoto-1254511224-612x612.jpg" alt="Logo" className="h-8 w-8" />
+            <span className="text-lg font-semibold">TABBITRA VOYAGE</span>
           </div>
           
           <div className="flex items-center gap-4">
