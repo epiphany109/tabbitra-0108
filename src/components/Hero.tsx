@@ -194,21 +194,29 @@ const Hero = () => {
       </div>
 
       {/* Start Earning Section */}
-      
+      <div className="relative z-10 min-h-screen flex items-center justify-center">
         <div className="text-center mb-12 pt-20">
-          <h2 className="text-6xl font-semibold mb-12 mt-15">START    EARNING</h2>
+          <h2 className="text-6xl font-semibold mb-12 mt-15">START EARNING</h2>
           <div className="relative">
-            <img src="/lovable-uploads/f8ecf25d-f7b6-43c7-af89-5a9f7f2a640c.png" alt="Tabbit Logo" className="w-auto h-auto mx-auto animate-spin-slow" />
-            <Button className="bg-accent hover:bg-accent-dark text-forest font-medium px-8 py-6 text-xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all duration-300 hover:-translate-y-1 hover:scale-110 outline-none focus:outline-none active:outline-none">
-              ENTER   APP
+            <img 
+              src="/lovable-uploads/f8ecf25d-f7b6-43c7-af89-5a9f7f2a640c.png" 
+              alt="Tabbit Logo" 
+              className="w-auto h-auto mx-auto animate-spin-slow" 
+            />
+            <Button 
+              className="bg-accent hover:bg-accent-dark text-forest font-medium px-8 py-6 text-xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all duration-300 hover:-translate-y-1 hover:scale-110 outline-none focus:outline-none active:outline-none"
+            >
+              ENTER APP
             </Button>
           </div>
         </div>
-      
+      </div>
 
-      {/* Copyright Section */}
-      <div className="relative z-10 text-sm text-white/60 text-center py-4">
-        © 2024 Tabbitra. All rights reserved.
+      {/* Copyright Section - Now fixed to bottom */}
+      <div className="fixed bottom-0 left-0 right-0 z-50 bg-forest/80 backdrop-blur-sm py-4">
+        <div className="text-sm text-white/60 text-center">
+          © 2024 Tabbitra. All rights reserved.
+        </div>
       </div>
     </div>
   );
