@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
-import { Twitter, MessageSquare } from "lucide-react";
+import { Twitter } from "lucide-react";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -39,7 +39,12 @@ const Header = () => {
               size="sm"
               className="text-white hover:text-accent transition-colors"
             >
-              <MessageSquare className="h-5 w-5" />
+              {/* 將 MessageSquare 替換為 img 標籤 */}
+              <img 
+                src="lovable-uploads/636e0a6918e57475a843f59f_icon_clyde_black_RGB.svg"  {/*圖片路徑*/}
+                alt="Message"
+                className="h-5 w-5"  {/* 保持與原本 icon 相同的尺寸 */}
+              />           
             </Button>
             <Button
               className="bg-accent hover:bg-accent-dark text-forest font-medium transition-colors"
