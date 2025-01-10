@@ -126,7 +126,15 @@ const Hero = () => {
       </div>
 
       {/* Features Section */}
-      <div className="relative z-10 min-h-screen flex items-center justify-center">
+      <div 
+        className="relative z-10 min-h-screen flex items-center justify-center"
+        style={{
+          backgroundImage: 'url("/lovable-uploads/6f2d46843e458a7915b8ea89f0e8a4e0.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
         <div className="text-center">
           <h2 className="text-[90px] font-bold text-white/10">
             Tabbitra    Voyage
