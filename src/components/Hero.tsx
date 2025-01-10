@@ -207,10 +207,10 @@ const Hero = () => {
 
       <div className="relative z-10 min-h-screen flex items-center justify-center">
         <div className="text-center mb-12 pt-20">
-          <h2 className="text-6xl font-semibold mb-12 mt-15">START EARNING</h2>
+          <h2 className="text-6xl font-semibold mb-12 mt-15">START   EARNING</h2>
           <div className="relative">
             <img 
-              src="/lovable-uploads/f8ecf25d-f7b6-43c7-af89-5a9f7f2a640c.png" 
+              src="/lovable-uploads/TabbitLogo.png" 
               alt="Tabbit Logo" 
               className="w-auto h-auto mx-auto animate-spin-slow" 
             />
@@ -225,7 +225,7 @@ const Hero = () => {
 
       <div 
         ref={footerRef}
-        className="absolute bottom-0 left-0 right-0 z-50 bg-forest/80 backdrop-blur-sm py-4"
+        className="absolute bottom-0 left-0 right-0 z-50 bg-forest/80 backdrop-blur-sm py-2"
         style={{
           transition: 'opacity 0.3s ease-out, transform 0.3s ease-out',
           opacity: 0,
