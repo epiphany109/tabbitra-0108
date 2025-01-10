@@ -136,7 +136,7 @@ const Hero = () => {
       </div>
 
       {/* Features Section */}
-      
+      <div className="relative z-10 min-h-screen flex items-center justify-center">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             <div 
@@ -191,10 +191,10 @@ const Hero = () => {
             </div>
           </div>
         </div>
-      
+      </div>
 
       {/* Start Earning Section */}
-      <div className="relative z-10 min-h-[70vh] bg-wood-dark flex flex-col items-center justify-center">
+      <div className="relative z-10 min-h-[70vh] flex flex-col items-center justify-center">
         <div className="text-center mb-12 pt-20">
           <h2 className="text-6xl font-semibold mb-12 mt-15">START    EARNING</h2>
           <div className="relative">
