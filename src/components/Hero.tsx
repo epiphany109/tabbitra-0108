@@ -87,7 +87,7 @@ const ParallaxHero = () => {
       <div className="fixed inset-0 z-10 overflow-hidden">
         <div 
           ref={layer2Ref}
-          className="absolute inset-0 bg-[url('lovable-uploads/6f2d46843e458a7915b8ea89f0e8a4e0.jpg')] bg-no-repeat"
+          className="absolute inset-0 bg-[url('/lovable-uploads/6f2d46843e458a7915b8ea89f0e8a4e0.jpg')] bg-no-repeat"
           style={{ 
             backgroundPosition: 'center center',
             backgroundSize: 'cover',
