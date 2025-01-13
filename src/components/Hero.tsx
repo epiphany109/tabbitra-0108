@@ -211,7 +211,7 @@ const Hero = () => {
       </div>
 
       {/* Information Columns Section */}
-      <div className="relative z-10 bg-wood/20 backdrop-blur-sm py-20">
+      <div className="relative z-10 bg-wood/20 backdrop-blur-sm py-20 mt-auto">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
             {/* Logo and Description */}
