@@ -146,8 +146,8 @@ const Hero = () => {
                 transition: 'all 0.8s ease-out'
               } as React.CSSProperties}
             >
-              <h3 className="text-2xl font-semibold mb-4">DECENTRALIZED, YET INTUITIVE</h3>
-              <p className="text-lg">Experience the freedom of DeFi with an intuitive, mobile-first app</p>
+              <h3 className="text-2xl font-semibold mb-4">POWERFUL DECENTRALIZATION</h3>
+              <p className="text-lg">Enjoy the benefits of DeFi with Tabbitra’s intuitive mobile-first approach</p>
             </div>
             
             <div 
@@ -159,8 +159,8 @@ const Hero = () => {
                 transitionDelay: '0.2s'
               } as React.CSSProperties}
             >
-              <h3 className="text-2xl font-semibold mb-4">EARNING OPTIMIZED</h3>
-              <p className="text-lg">Tabbitra handles everything - swaps, contract interactions, and gas payments</p>
+              <h3 className="text-2xl font-semibold mb-4">PROFIT-FOCUSED FEATURES</h3>
+              <p className="text-lg">Handle all your DeFi needs—swaps, contracts, and gas—efficiently and profitably</p>
             </div>
 
             <div 
@@ -172,8 +172,8 @@ const Hero = () => {
                 transitionDelay: '0.4s'
               } as React.CSSProperties}
             >
-              <h3 className="text-2xl font-semibold mb-4">DEFI WITH DATA</h3>
-              <p className="text-lg">Simulate deposit outcomes, track your transactions, and gain insights</p>
+              <h3 className="text-2xl font-semibold mb-4">EMPOWER DECISIONS</h3>
+              <p className="text-lg">Simulate scenarios, gain insights, and stay in control of your DeFi journey</p>
             </div>
             
             <div 
@@ -185,8 +185,8 @@ const Hero = () => {
                 transitionDelay: '0.6s'
               } as React.CSSProperties}
             >
-              <h3 className="text-2xl font-semibold mb-4">EXPLOIT BLOCKING PROTECTION</h3>
-              <p className="text-lg">Tabbitra leverages Spherex's zero day exploit blocking</p>
+              <h3 className="text-2xl font-semibold mb-4">Built-in Exploit Defense</h3>
+              <p className="text-lg">Tabbitra safeguards your assets with advanced zero-day exploit protection</p>
             </div>
           </div>
         </div>
