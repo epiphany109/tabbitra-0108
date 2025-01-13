@@ -19,7 +19,7 @@ const Header = () => {
         scrolled ? "py-4 glass" : "py-4"
       }`}
     >
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4">
         <nav className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <img src="/lovable-uploads/TabbitLogo.png" alt="Logo" className="h-8 w-8 rounded" />
