@@ -279,19 +279,6 @@ const Hero = () => {
         </div>
       </div>
 
-      <div 
-        ref={footerRef}
-        className="absolute bottom-0 left-0 right-0 z-50 bg-forest/80 backdrop-blur-sm py-2"
-        style={{
-          transition: 'opacity 0.3s ease-out, transform 0.3s ease-out',
-          opacity: 0,
-          transform: 'translateY(20px)'
-        }}
-      >
-        <div className="text-sm text-white/60 text-center">
-          © 2024 Tabbitra. All rights reserved.
-        </div>
-      </div>
     </div>
   );
 };
