@@ -269,10 +269,10 @@ const Hero = () => {
           {/* Bottom Footer */}
           <div className="mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
             <div className="flex gap-6 mb-0 md:mb-0">
-              <a href="#" className="text-white/60 hover:text-white text-sm leading-none margin-bottom:0 padding-bottom:0">Privacy policy</a>
-              <a href="#" className="text-white/60 hover:text-white text-sm leading-none margin-bottom:0 padding-bottom:0">Terms of use</a>
+              <a href="#" className="text-white/60 hover:text-white text-sm">Privacy policy</a>
+              <a href="#" className="text-white/60 hover:text-white text-sm">Terms of use</a>
             </div>
-            <div className="text-white/60 text-sm leading-none margin-bottom:0 padding-bottom:0">
+            <div className="text-white/60 text-sm">
               © 2024 Tabbitra. All rights reserved.
             </div>
           </div>
