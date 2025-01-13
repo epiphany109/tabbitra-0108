@@ -5,6 +5,7 @@ import { Twitter } from "lucide-react";
 const Hero = () => {
   const particlesRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
+  const footerRef = useRef<HTMLElement>(null);  // Add this line to define footerRef
 
   useEffect(() => {
     const createLeaves = () => {
@@ -41,19 +42,16 @@ const Hero = () => {
       // Smooth transition between backgrounds
       if (background1 && background2) {
         const transitionPoint = secondSectionStart;
-        const transitionRange = viewportHeight / 2; // Transition over half a viewport
+        const transitionRange = viewportHeight / 2;
         
         if (scrolled < transitionPoint) {
-          // First background fully visible
           background1.style.opacity = '1';
           background2.style.opacity = '0';
         } else if (scrolled >= transitionPoint && scrolled <= transitionPoint + transitionRange) {
-          // Transition zone
           const progress = (scrolled - transitionPoint) / transitionRange;
           background1.style.opacity = `${1 - progress}`;
           background2.style.opacity = `${progress}`;
         } else {
-          // Second background fully visible
           background1.style.opacity = '0';
           background2.style.opacity = '1';
         }
@@ -69,7 +67,7 @@ const Hero = () => {
 
       // Footer visibility logic
       if (footerRef.current) {
-        const bottomThreshold = 100; // pixels from bottom
+        const bottomThreshold = 100;
         const isNearBottom = (window.innerHeight + window.scrollY) >= documentHeight - bottomThreshold;
         
         footerRef.current.style.position = isNearBottom ? 'fixed' : 'absolute';
@@ -143,7 +141,7 @@ const Hero = () => {
       </div>
 
       {/* Footer */}
-      <footer className="relative z-10 bg-black/40 backdrop-blur-sm mt-auto">
+      <footer ref={footerRef} className="relative z-10 bg-black/40 backdrop-blur-sm mt-auto">
         <div className="container mx-auto px-6 py-16">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
             {/* Logo Column */}
