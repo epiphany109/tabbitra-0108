@@ -1,11 +1,10 @@
 import { useEffect, useRef } from "react";
 import { Button } from "./ui/button";
+import { Twitter } from "lucide-react";
 
 const Hero = () => {
   const particlesRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
-  const featuresRef = useRef<HTMLDivElement>(null);
-  const footerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const createLeaves = () => {
@@ -96,7 +95,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative min-h-[500vh] flex flex-col">
+    <div className="relative min-h-[100vh] flex flex-col">
       <div ref={particlesRef} className="fixed inset-0 pointer-events-none overflow-hidden z-20" />
       
       <div className="fixed inset-0 z-0 overflow-hidden">
@@ -113,116 +112,101 @@ const Hero = () => {
             transition: 'opacity 0.5s ease-out'
           }}
         />
-        
       </div>
 
-      <div className="relative z-10 min-h-screen flex items-center justify-center px-0">
-        <div className="text-center w-full">
-          <h1 ref={titleRef} className="text-6xl font-semibold mb-6 animate-fade-up" style={{ willChange: 'transform' }}>
-            Embark On Tabbitra Voyage
-          </h1>
-          <p className="text-xl mb-8 text-white/80 max-w-2xl mx-auto animate-fade-up" style={{ animationDelay: "0.2s" }}>
-            The best way to interact with the chain DeFi
-          </p>
-          <div className="flex justify-center gap-4 mb-12">
-            <Button variant="outline" className="bg-accent hover:bg-accent-dark text-forest font-medium">
-              TWITTER
-            </Button>
-            <Button variant="outline" className="bg-accent hover:bg-accent-dark text-forest font-medium">
-              DISCORD
-            </Button>
+      {/* Main Content */}
+      <div className="relative z-10 min-h-screen">
+        <div className="container mx-auto px-6 pt-32">
+          {/* Built on Chain Badge */}
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-8">
+            <img src="/lovable-uploads/TabbitLogo.png" alt="Chain Logo" className="h-5 w-5" />
+            <span className="text-sm text-white/80">Built on Berachain</span>
           </div>
-        </div>
-      </div>
 
-      <div className="relative z-10 h-fit flex items-center justify-center">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <div 
-              className="feature-box bg-wood p-8 rounded-lg transition-all duration-1000 opacity-0"
-              style={{ 
-                '--rotate-angle': '-2deg',
-                transform: 'translateY(50px) rotate(-2deg)',
-                transition: 'all 0.8s ease-out'
-              } as React.CSSProperties}
-            >
-              <h3 className="text-2xl font-semibold mb-4">POWERFUL DECENTRALIZATION</h3>
-              <p className="text-lg">Enjoy the benefits of DeFi with Tabbitra’s intuitive mobile-first approach</p>
-            </div>
-            
-            <div 
-              className="feature-box bg-wood p-8 rounded-lg transition-all duration-1000 opacity-0"
-              style={{ 
-                '--rotate-angle': '2deg',
-                transform: 'translateY(50px) rotate(2deg)',
-                transition: 'all 0.8s ease-out',
-                transitionDelay: '0.2s'
-              } as React.CSSProperties}
-            >
-              <h3 className="text-2xl font-semibold mb-4">PROFIT-FOCUSED FEATURES</h3>
-              <p className="text-lg">Handle all your DeFi needs—swaps, contracts, and gas—efficiently and profitably</p>
-            </div>
-
-            <div 
-              className="feature-box bg-wood p-8 rounded-lg transition-all duration-1000 opacity-0"
-              style={{ 
-                '--rotate-angle': '-1deg',
-                transform: 'translateY(50px) rotate(-1deg)',
-                transition: 'all 0.8s ease-out',
-                transitionDelay: '0.4s'
-              } as React.CSSProperties}
-            >
-              <h3 className="text-2xl font-semibold mb-4">EMPOWER DECISIONS</h3>
-              <p className="text-lg">Simulate scenarios, gain insights, and stay in control of your DeFi journey</p>
-            </div>
-            
-            <div 
-              className="feature-box bg-wood p-8 rounded-lg transition-all duration-1000 opacity-0"
-              style={{ 
-                '--rotate-angle': '1deg',
-                transform: 'translateY(50px) rotate(1deg)',
-                transition: 'all 0.8s ease-out',
-                transitionDelay: '0.6s'
-              } as React.CSSProperties}
-            >
-              <h3 className="text-2xl font-semibold mb-4">Built-in Exploit Defense</h3>
-              <p className="text-lg">Tabbitra safeguards your assets with advanced zero-day exploit protection</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="relative z-10 min-h-screen flex items-center justify-center">
-        <div className="text-center mb-12 pt-20">
-          <h2 className="text-6xl font-semibold mb-12 mt-15">START   EARNING</h2>
-          <div className="relative">
-            <img 
-              src="/lovable-uploads/TabbitLogo.png" 
-              alt="Tabbit Logo" 
-              className="w-25% h-25% mx-auto animate-spin-slow" 
-            />
-            <Button 
-              className="bg-accent hover:bg-accent-dark text-forest font-medium px-8 py-6 text-xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all duration-300 hover:-translate-y-1 hover:scale-110 outline-none focus:outline-none active:outline-none"
-            >
-              ENTER APP
+          {/* Hero Text */}
+          <div className="max-w-2xl">
+            <h1 className="text-7xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-pink-500 via-orange-400 to-yellow-500 text-transparent bg-clip-text">
+                Proof of Liquidity
+              </span>
+              <br />
+              <span className="text-white">in one click</span>
+            </h1>
+            <p className="text-xl text-white/80 mb-8">
+              Tabbitra simplifies interacting with Proof of Liquidity with our liquid staking products.
+            </p>
+            <Button className="bg-white/20 hover:bg-white/30 text-white px-8 py-6 text-lg rounded-lg">
+              Stake
             </Button>
           </div>
         </div>
       </div>
 
-      <div 
-        ref={footerRef}
-        className="absolute bottom-0 left-0 right-0 z-50 bg-forest/80 backdrop-blur-sm py-2"
-        style={{
-          transition: 'opacity 0.3s ease-out, transform 0.3s ease-out',
-          opacity: 0,
-          transform: 'translateY(20px)'
-        }}
-      >
-        <div className="text-sm text-white/60 text-center">
-          © 2024 Tabbitra. All rights reserved.
+      {/* Footer */}
+      <footer className="relative z-10 bg-black/40 backdrop-blur-sm mt-auto">
+        <div className="container mx-auto px-6 py-16">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+            {/* Logo Column */}
+            <div className="space-y-6">
+              <div className="flex items-center gap-2">
+                <img src="/lovable-uploads/TabbitLogo.png" alt="Logo" className="h-8 w-8" />
+                <span className="text-xl font-medium">TABBITRA</span>
+              </div>
+              <p className="text-white/60">Proof of Liquidity in one click</p>
+              <div className="flex gap-4">
+                <a href="#" className="text-white/60 hover:text-white">
+                  <Twitter className="h-6 w-6" />
+                </a>
+                <a href="#" className="text-white/60 hover:text-white">
+                  <img 
+                    src="/lovable-uploads/636e0a6918e57475a843f59f_icon_clyde_black_RGB.svg"
+                    alt="Discord"
+                    className="h-6 w-6 invert opacity-60 hover:opacity-100"
+                  />
+                </a>
+              </div>
+            </div>
+
+            {/* Products Column */}
+            <div>
+              <h3 className="text-sm font-medium text-white/40 uppercase mb-6">Products</h3>
+              <ul className="space-y-4">
+                <li><a href="#" className="text-white/80 hover:text-white">iBGT</a></li>
+                <li><a href="#" className="text-white/80 hover:text-white">Vaults</a></li>
+              </ul>
+            </div>
+
+            {/* Company Column */}
+            <div>
+              <h3 className="text-sm font-medium text-white/40 uppercase mb-6">Company</h3>
+              <ul className="space-y-4">
+                <li><a href="#" className="text-white/80 hover:text-white">Brand</a></li>
+              </ul>
+            </div>
+
+            {/* Resources Column */}
+            <div>
+              <h3 className="text-sm font-medium text-white/40 uppercase mb-6">Resources</h3>
+              <ul className="space-y-4">
+                <li><a href="#" className="text-white/80 hover:text-white">Blog</a></li>
+                <li><a href="#" className="text-white/80 hover:text-white">Docs</a></li>
+                <li><a href="#" className="text-white/80 hover:text-white">Security</a></li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Bottom Footer */}
+          <div className="border-t border-white/10 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="text-sm text-white/60">
+              © 2024 Tabbitra Finance
+            </div>
+            <div className="flex gap-6">
+              <a href="#" className="text-sm text-white/60 hover:text-white">Privacy policy</a>
+              <a href="#" className="text-sm text-white/60 hover:text-white">Terms of use</a>
+            </div>
+          </div>
         </div>
-      </div>
+      </footer>
     </div>
   );
 };
