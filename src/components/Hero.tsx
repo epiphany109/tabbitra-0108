@@ -268,9 +268,9 @@ const Hero = () => {
 
           {/* Bottom Footer */}
           <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
-            <div className="flex gap-4 mb-0 md:mb-0">
-              <a href="#" className="text-white/60 hover:text-white text-sm">Privacy policy</a>
-              <a href="#" className="text-white/60 hover:text-white text-sm">Terms of use</a>
+            <div className="flex gap-6 mb-0 md:mb-0">
+              <a href="#" className="text-white/60 hover:text-white text-sm leading-none">Privacy policy</a>
+              <a href="#" className="text-white/60 hover:text-white text-sm leading-none">Terms of use</a>
             </div>
             <div className="text-white/60 text-sm">
               © 2024 Tabbitra. All rights reserved.
@@ -278,9 +278,9 @@ const Hero = () => {
           </div>
         </div>
       </div>
-
     </div>
   );
 };
 
 export default Hero;
+
