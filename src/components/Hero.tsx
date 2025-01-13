@@ -202,7 +202,7 @@ const Hero = () => {
               className="w-25% h-25% mx-auto animate-spin-slow" 
             />
             <Button 
-              className="bg-accent hover:bg-accent-dark text-forest font-medium px-8 py-6 text-xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all duration-300 hover:-translate-y-1 hover:scale-110 outline-none focus:outline-none active:outline-none"
+              className="bg-accent hover:bg-accent-dark text-forest font-medium px-8 py-6 text-xl ease-in-out bg-accent-dark-600 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all duration-300 hover:-translate-y-1 hover:scale-110 outline-none focus:outline-none active:outline-none"
             >
               ENTER APP
             </Button>
@@ -268,7 +268,7 @@ const Hero = () => {
 
           {/* Bottom Footer */}
           <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
-            <div className="flex gap-6 mb-0 md:mb-0">
+            <div className="flex gap-4 mb-0 md:mb-0">
               <a href="#" className="text-white/60 hover:text-white text-sm">Privacy policy</a>
               <a href="#" className="text-white/60 hover:text-white text-sm">Terms of use</a>
             </div>
