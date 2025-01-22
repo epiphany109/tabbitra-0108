@@ -101,11 +101,8 @@ const Hero = () => {
       
       <div className="fixed inset-0 z-0 overflow-hidden">
         <div 
-          className="parallax-bg-1 absolute inset-0 bg-[url('/lovable-uploads/7cc4c3f46fe854fc6b4c962bb6b3862a.jpg')] bg-no-repeat"
+          className="parallax-bg-1 absolute inset-0 bg-[url('/lovable-uploads/7cc4c3f46fe854fc6b4c962bb6b3862a.jpg')] bg-cover bg-center"
           style={{ 
-            backgroundPosition: 'center center',
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
             height: '120%',
             width: '100%',
             transformOrigin: 'center center',
@@ -113,7 +110,6 @@ const Hero = () => {
             transition: 'opacity 0.5s ease-out'
           }}
         />
-        
       </div>
 
       <div className="relative z-10 min-h-screen flex items-center justify-center px-0">
