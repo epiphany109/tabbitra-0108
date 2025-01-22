@@ -101,7 +101,7 @@ const Hero = () => {
       
       <div className="fixed inset-0 z-0 overflow-hidden">
         <div 
-          className="parallax-bg-1 absolute inset-0 bg-[url('/lovable-uploads/9dc68e5604fae3df930b2ce3f0ecc0d2.jpg')] bg-no-repeat"
+          className="parallax-bg-1 absolute inset-0 bg-[url('/lovable-uploads/7cc4c3f46fe854fc6b4c962bb6b3862a.jpg')] bg-no-repeat"
           style={{ 
             backgroundPosition: 'center center',
             backgroundSize: 'cover',
