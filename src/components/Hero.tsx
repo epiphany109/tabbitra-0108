@@ -193,8 +193,10 @@ const Hero = () => {
       </div>
 
       <div className="relative z-10 min-h-screen flex items-center justify-center">
-        <div className="text-center mb-12 pt-20">
-          <h2 className="text-6xl font-semibold mb-12 mt-15">START   EARNING</h2>
+        <div className="text-center mb-12 pt-20 w-full px-4 py-24 bg-gradient-to-br from-accent/20 via-wood/30 to-accent-dark/20 backdrop-blur-sm">
+          <h2 className="text-6xl font-semibold mb-12 mt-15 bg-gradient-to-r from-accent to-accent-dark bg-clip-text text-transparent">
+            START EARNING
+          </h2>
           <div className="relative">
             <img 
               src="/lovable-uploads/TabbitLogo.png" 
@@ -202,7 +204,7 @@ const Hero = () => {
               className="w-25% h-25% mx-auto animate-spin-slow" 
             />
             <Button 
-              className="bg-accent hover:bg-accent-dark text-forest font-medium px-8 py-6 text-xl ease-in-out bg-accent-dark-600 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all duration-300 hover:-translate-y-1 hover:scale-110 outline-none focus:outline-none active:outline-none"
+              className="bg-accent hover:bg-accent-dark text-forest font-medium px-8 py-6 text-xl ease-in-out absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all duration-300 hover:-translate-y-1 hover:scale-110 outline-none focus:outline-none active:outline-none"
             >
               ENTER APP
             </Button>
