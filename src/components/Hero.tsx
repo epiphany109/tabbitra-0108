@@ -99,6 +99,7 @@ const Hero = () => {
     <div className="relative min-h-[500vh] flex flex-col">
       <div ref={particlesRef} className="fixed inset-0 pointer-events-none overflow-hidden z-20" />
       
+      {/* Upper background with image */}
       <div className="fixed inset-0 z-0 overflow-hidden">
         <div 
           className="parallax-bg-1 absolute inset-0 bg-[url('/lovable-uploads/fac9385005d9f2c0602deb98a598eb9d.jpg')] bg-cover bg-center"
@@ -112,6 +113,7 @@ const Hero = () => {
         />
       </div>
 
+      {/* Hero section */}
       <div className="relative z-10 min-h-screen flex items-center justify-center px-0">
         <div className="text-center w-full">
           <h1 ref={titleRef} className="text-6xl font-semibold mb-6 animate-fade-up" style={{ willChange: 'transform' }}>
@@ -131,8 +133,19 @@ const Hero = () => {
         </div>
       </div>
 
+      {/* Features section with background transition */}
       <div className="relative z-10 h-fit flex items-center justify-center">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 relative">
+          {/* Background color block starting 10px below */}
+          <div 
+            className="absolute -z-10 left-0 right-0 bg-wood"
+            style={{
+              top: '-10px',
+              bottom: '-100%',
+              transform: 'translateY(10px)'
+            }}
+          />
+          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             <div 
               className="feature-box bg-wood p-8 rounded-lg transition-all duration-1000 opacity-0"
