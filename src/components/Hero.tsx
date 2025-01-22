@@ -80,7 +80,7 @@ const Hero = () => {
 
       // Features fade-in animation
       const features = document.querySelectorAll('.feature-box');
-      features.forEach((feature, index) => {
+      features.forEach((feature) => {
         const featureTop = (feature as HTMLElement).offsetTop;
         const scrollPosition = scrolled + window.innerHeight * 0.8;
         
@@ -101,7 +101,7 @@ const Hero = () => {
       
       <div className="fixed inset-0 z-0 overflow-hidden">
         <div 
-          className="parallax-bg-1 absolute inset-0 bg-[url('lovable-uploads/7cc4c3f46fe854fc6b4c962bb6b3862a (2).jpg')] bg-cover bg-center"
+          className="parallax-bg-1 absolute inset-0 bg-[url('/lovable-uploads/fac9385005d9f2c0602deb98a598eb9d.jpg')] bg-cover bg-center"
           style={{ 
             height: '120%',
             width: '100%',
@@ -190,24 +190,21 @@ const Hero = () => {
 
       <div className="relative z-10 min-h-screen flex items-center justify-center">
         <div className="text-center mb-12 pt-20">
-      
-        <div className="text-center mb-12 pt-20 w-full px-4 py-24 bg-gradient-to-br from-accent/20 via-wood/30 to-accent-dark/20 backdrop-blur-sm">
-          
-          
-        </div>
+          <div className="text-center mb-12 pt-20 w-full px-4 py-24 bg-gradient-to-br from-accent/20 via-wood/30 to-accent-dark/20 backdrop-blur-sm">
+          </div>
         </div>
       </div>         
 
-          {/* Bottom Footer */}
-          <div className="mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
-            <div className="flex gap-6 mb-0 md:mb-0">
-              <a href="#" className="text-white/60 hover:text-white text-sm">Privacy policy</a>
-              <a href="#" className="text-white/60 hover:text-white text-sm">Terms of use</a>
-            </div>
-            <div className="text-white/60 text-sm">
-              © 2024 Tabbitra. All rights reserved.
-            </div>
-          </div>
+      {/* Bottom Footer */}
+      <div className="mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
+        <div className="flex gap-6 mb-0 md:mb-0">
+          <a href="#" className="text-white/60 hover:text-white text-sm">Privacy policy</a>
+          <a href="#" className="text-white/60 hover:text-white text-sm">Terms of use</a>
+        </div>
+        <div className="text-white/60 text-sm">
+          © 2024 Tabbitra. All rights reserved.
+        </div>
+      </div>
     </div>
   );
 };
