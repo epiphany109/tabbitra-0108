@@ -116,39 +116,84 @@ const Hero = () => {
         
       </div>
 
-      <div className="relative z-10 min-h-screen flex items-center justify-center">
-        <div className="text-center mb-12 pt-20 w-full px-4 py-24 bg-wood">
-          <h2 className="text-6xl font-semibold mb-12 mt-15 bg-gradient-to-r from-accent to-accent-dark bg-clip-text text-transparent">
-            START EARNING
-          </h2>
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-              <div>
-                <h3 className="text-2xl font-semibold mb-4 text-accent">About Tabbitra</h3>
-                <p className="text-white/80 leading-relaxed">
-                  Tabbitra is a revolutionary DeFi platform designed to empower users with seamless blockchain interactions. Our mission is to make decentralized finance accessible and profitable for everyone.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-2xl font-semibold mb-4 text-accent">Contact Us</h3>
-                <p className="text-white/80 leading-relaxed">
-                  Email: support@tabbitra.com<br />
-                  Twitter: @TabbitraFinance<br />
-                  Discord: discord.gg/tabbitra
-                </p>
-              </div>
+      <div className="relative z-10 min-h-screen flex items-center justify-center px-0">
+        <div className="text-center w-full">
+          <h1 ref={titleRef} className="text-6xl font-semibold mb-6 animate-fade-up" style={{ willChange: 'transform' }}>
+            Embark On Tabbitra Voyage
+          </h1>
+          <p className="text-xl mb-8 text-white/80 max-w-2xl mx-auto animate-fade-up" style={{ animationDelay: "0.2s" }}>
+            The best way to interact with the chain DeFi
+          </p>
+          <div className="flex justify-center gap-4 mb-12">
+            <Button variant="outline" className="bg-accent hover:bg-accent-dark text-forest font-medium">
+              TWITTER
+            </Button>
+            <Button variant="outline" className="bg-accent hover:bg-accent-dark text-forest font-medium">
+              DISCORD
+            </Button>
+          </div>
+        </div>
+      </div>
+
+      <div className="relative z-10 h-fit flex items-center justify-center">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div 
+              className="feature-box bg-wood p-8 rounded-lg transition-all duration-1000 opacity-0"
+              style={{ 
+                '--rotate-angle': '-2deg',
+                transform: 'translateY(50px) rotate(-2deg)',
+                transition: 'all 0.8s ease-out'
+              } as React.CSSProperties}
+            >
+              <h3 className="text-2xl font-semibold mb-4">POWERFUL DECENTRALIZATION</h3>
+              <p className="text-lg">Enjoy the benefits of DeFi with Tabbitra’s intuitive mobile-first approach</p>
             </div>
-            <div className="mt-12 pt-8 border-t border-white/10">
-              <p className="text-white/60 text-sm">
-                © 2024 Tabbitra. All rights reserved. Tabbitra is a registered trademark.
-              </p>
+            
+            <div 
+              className="feature-box bg-wood p-8 rounded-lg transition-all duration-1000 opacity-0"
+              style={{ 
+                '--rotate-angle': '2deg',
+                transform: 'translateY(50px) rotate(2deg)',
+                transition: 'all 0.8s ease-out',
+                transitionDelay: '0.2s'
+              } as React.CSSProperties}
+            >
+              <h3 className="text-2xl font-semibold mb-4">PROFIT-FOCUSED FEATURES</h3>
+              <p className="text-lg">Handle all your DeFi needs—swaps, contracts, and gas—efficiently and profitably</p>
+            </div>
+
+            <div 
+              className="feature-box bg-wood p-8 rounded-lg transition-all duration-1000 opacity-0"
+              style={{ 
+                '--rotate-angle': '-1deg',
+                transform: 'translateY(50px) rotate(-1deg)',
+                transition: 'all 0.8s ease-out',
+                transitionDelay: '0.4s'
+              } as React.CSSProperties}
+            >
+              <h3 className="text-2xl font-semibold mb-4">EMPOWER DECISIONS</h3>
+              <p className="text-lg">Simulate scenarios, gain insights, and stay in control of your DeFi journey</p>
+            </div>
+            
+            <div 
+              className="feature-box bg-wood p-8 rounded-lg transition-all duration-1000 opacity-0"
+              style={{ 
+                '--rotate-angle': '1deg',
+                transform: 'translateY(50px) rotate(1deg)',
+                transition: 'all 0.8s ease-out',
+                transitionDelay: '0.6s'
+              } as React.CSSProperties}
+            >
+              <h3 className="text-2xl font-semibold mb-4">Built-in Exploit Defense</h3>
+              <p className="text-lg">Tabbitra safeguards your assets with advanced zero-day exploit protection</p>
             </div>
           </div>
         </div>
       </div>
 
       <div className="relative z-10 min-h-screen flex items-center justify-center">
-        <div className="text-center mb-12 pt-20 w-full px-4 py-24 bg-wood">
+        <div className="text-center mb-12 pt-20 w-full px-4 py-24 bg-gradient-to-br from-accent/20 via-wood/30 to-accent-dark/20 backdrop-blur-sm">
           <h2 className="text-6xl font-semibold mb-12 mt-15 bg-gradient-to-r from-accent to-accent-dark bg-clip-text text-transparent">
             START EARNING
           </h2>
